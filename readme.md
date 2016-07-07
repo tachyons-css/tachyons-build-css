@@ -1,4 +1,4 @@
-# tachyons-build-css [![Build Status](https://secure.travis-ci.org/johnotander/tachyons-build-css.svg?branch=master)](https://travis-ci.org/johnotander/tachyons-build-css) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# tachyons-build-css [![Build Status](https://secure.travis-ci.org/tachyons-css/tachyons-build-css.svg?branch=master)](https://travis-ci.org/tachyons-css/tachyons-build-css) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 Transpile Tachyons PostCSS to vanilla CSS.
 This build process also removes comments, autoprefixes, and has options for minifying the output or repeating class selectors (to play nice with overly specific CSS frameworks).
