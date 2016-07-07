@@ -34,8 +34,5 @@ module.exports = function tachyonsBuild (css, options) {
     plugins.push(classRepeat({ repeat: repeatNum }))
   }
 
-  return postcss(plugins).process(css, {
-    from: options.inputFile,
-    to: options.outputFile
-  })
+  return postcss(plugins).process(css, options)
 }
