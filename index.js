@@ -16,7 +16,7 @@ module.exports = function tachyonsBuild (css, options) {
   options = options || {}
 
   const plugins = [
-    atImport(), vars(), conditionals(), media(), queries(), perfect({ format: 'compact' })
+    atImport(), vars(), conditionals(), media(), queries(), perfect({ format: 'compact' }), prefixer()
   ]
 
   if (options.minify) {
