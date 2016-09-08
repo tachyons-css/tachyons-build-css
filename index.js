@@ -14,9 +14,9 @@ const classRepeat = require('postcss-class-repeat')
 
 module.exports = function tachyonsBuild (css, options) {
   options = options || {}
-
+  const breakpoints = options.breakpoints || {}
   const plugins = [
-    atImport(), vars(), conditionals(), media(), queries(), perfect({ format: 'compact' }), prefixer()
+    atImport(), vars(), conditionals(), media({extensions: breakpoints}), queries(), perfect({ format: 'compact' }), prefixer()
   ]
 
   if (options.minify) {

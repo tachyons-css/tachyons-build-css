@@ -20,7 +20,12 @@ const input = fs.readFileSync('input.css', 'utf8')
 tachyonsBuildCss(input, {
   from: 'input.css',
   to: 'output.css',
-  minify: true
+  minify: true,
+  breakpoints: {
+    'breakpoint-not-small': 'screen and (min-width: 30em)',
+    'breakpoint-medium': 'screen and (min-width: 30em) and (max-width: 60em)',
+    'breakpoint-large': 'screen and (min-width: 60em)'
+  }
 }).then(result => {
   fs.writeFileSync('output.css', result.css)
 })
@@ -34,6 +39,7 @@ tachyonsBuildCss(input, {
 | `to` | `undefined` | The output file name | file name |
 | `minify` | `false` | Minify the output CSS | `true`, `false` |
 | `repeat` | `false` | Whether to repeat classes in selectors | `1..10` |
+| `breakpoints` | `{}` | Custom media breakpoint overrides | breakpoints |
 
 ## License
 
