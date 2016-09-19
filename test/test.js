@@ -21,7 +21,7 @@ test('processes source code and repeats classes', t => {
 })
 
 function testFixture (t, input, output, opts) {
-  const result = tachyonsBuildCss(input, opts).then(result => {
+  tachyonsBuildCss(input, opts).then(result => {
     t.deepEqual(result.css, output)
   })
 }
