@@ -33,7 +33,7 @@ tachyonsBuildCss(input, {
 | `from` | `undefined` | The input file name | file name |
 | `to` | `undefined` | The output file name | file name |
 | `minify` | `false` | Minify the output CSS | `true`, `false` |
-| `repeat` | `false` | Whether to repeat classes in selectors | `1..10` |
+| `repeat` | `false` | Whether to repeat classes in selectors | `false`, `1..10` |
 
 ## License
 
