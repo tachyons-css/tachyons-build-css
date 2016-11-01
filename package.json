@@ -27,6 +27,7 @@
     "postcss-import": "^8.1.2"
   },
   "devDependencies": {
-    "ava": "*"
+    "ava": "*",
+    "tachyons-cli": "^1.0.9"
   }
 }
