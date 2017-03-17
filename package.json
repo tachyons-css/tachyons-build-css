@@ -24,6 +24,7 @@
     "postcss-css-variables": "^0.6.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-discard-comments": "^2.0.4",
+    "postcss-extend": "^1.0.5",
     "postcss-import": "^8.1.2"
   },
   "devDependencies": {

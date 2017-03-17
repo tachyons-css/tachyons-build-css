@@ -39,3 +39,10 @@
 .grow:focus {
   transform: scale(1.05);
 }
+
+
+.combo {
+  @extend .imaginary;
+  @extend .grow;
+  @extend .bg-cv-ns;
+}
