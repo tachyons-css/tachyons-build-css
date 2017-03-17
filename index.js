@@ -5,6 +5,7 @@ const cssnano = require('cssnano')
 const queries = require('css-mqpacker')
 const perfect = require('perfectionist')
 const prefixer = require('autoprefixer')
+const atExtend = require('postcss-extend')
 const atImport = require('postcss-import')
 const media = require('postcss-custom-media')
 const vars = require('postcss-css-variables')
@@ -21,7 +22,7 @@ module.exports = function tachyonsBuild (css, options) {
   }
 
   const plugins = [
-    atImport(), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
+    atImport(), vars(), conditionals(), media(), queries(), atExtend(), perfect(perfectionistOptions), prefixer()
   ]
 
   if (options.minify) {
