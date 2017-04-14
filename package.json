@@ -8,6 +8,7 @@
     "index.js"
   ],
   "scripts": {
+    "lint": "standard",
     "test": "ava -v"
   },
   "repository": "johnotander/tachyons-build-css",
@@ -21,13 +22,14 @@
     "postcss": "^5.2.5",
     "postcss-class-repeat": "^0.1.0",
     "postcss-conditionals": "^2.0.2",
-    "postcss-css-variables": "^0.6.0",
+    "postcss-css-variables": "^0.7.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-discard-comments": "^2.0.4",
-    "postcss-import": "^8.1.2"
+    "postcss-import": "^9.1.0"
   },
   "devDependencies": {
     "ava": "*",
+    "standard": "^10.0.2",
     "tachyons-cli": "^1.0.9"
   }
 }
