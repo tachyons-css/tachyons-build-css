@@ -20,7 +20,8 @@ const input = fs.readFileSync('input.css', 'utf8')
 tachyonsBuildCss(input, {
   from: 'input.css',
   to: 'output.css',
-  minify: true
+  minify: true,
+  plugins: [my(), other(), plugins()]
 }).then(result => {
   fs.writeFileSync('output.css', result.css)
 })
@@ -34,6 +35,7 @@ tachyonsBuildCss(input, {
 | `to` | `undefined` | The output file name | file name |
 | `minify` | `false` | Minify the output CSS | `true`, `false` |
 | `repeat` | `false` | Whether to repeat classes in selectors | `false`, `1..10` |
+| `plugins` | `false` | Additional postcss plugins | [my(), other(), plugins()] |
 
 ## License
 

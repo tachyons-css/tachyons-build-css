@@ -1,0 +1,6 @@
+/*
+	POSTCSS COLOR FUNCTION
+*/
+body {
+	background: color(red a(90%));
+}

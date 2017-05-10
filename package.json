@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "ava": "*",
+    "postcss-color-function": "^3.0.0",
     "standard": "^10.0.2",
     "tachyons-cli": "^1.0.9"
   }
