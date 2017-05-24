@@ -12,7 +12,7 @@
 */
 .bg-cv { background-size: cover; }
 .bg-cn { background-size: contain; }
-.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); -ms-transform: scale( 1.05 ); transform: scale( 1.05 ); }
 @media screen and (min-width: 30em) {
  .bg-cv-ns { background-size: cover; }
  .bg-cn-ns { background-size: contain; }
