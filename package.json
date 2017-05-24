@@ -32,5 +32,9 @@
     "postcss-color-function": "^3.0.0",
     "standard": "^10.0.2",
     "tachyons-cli": "^1.0.9"
-  }
+  },
+  "browserslist": [
+    "> 0.1%",
+    "last 2 versions"
+  ]
 }
