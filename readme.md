@@ -27,6 +27,17 @@ tachyonsBuildCss(input, {
 })
 ```
 
+If you want more control, but want the plugins used here, you can get them with the `getPlugins` function
+```javascript
+const { getPlugins } = require('tachyons-build-css')
+
+const plugins = getPlugins({
+  from: 'input.css',
+  to: 'output.css',
+  minify: true
+})
+```
+
 #### Options
 
 | Option | Default | Description | Values |

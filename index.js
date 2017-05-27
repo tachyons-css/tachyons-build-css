@@ -12,7 +12,7 @@ const conditionals = require('postcss-conditionals')
 const rmComments = require('postcss-discard-comments')
 const classRepeat = require('postcss-class-repeat')
 
-module.exports = function tachyonsBuild (css, options) {
+const getPlugins = function (options) {
   options = options || {}
 
   const perfectionistOptions = options.perfectionist || {
@@ -20,8 +20,10 @@ module.exports = function tachyonsBuild (css, options) {
     trimTrailingZeros: false
   }
 
+  const atImportOptions = options.atImport || {}
+
   const plugins = [
-    atImport(), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
+    atImport(atImportOptions), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
   ]
 
   if (options.minify) {
@@ -43,5 +45,13 @@ module.exports = function tachyonsBuild (css, options) {
     plugins.push(...options.plugins)
   }
 
+  return plugins
+}
+
+module.exports = function tachyonsBuild (css, options) {
+  const plugins = getPlugins(options)
+
   return postcss(plugins).process(css, options)
 }
+
+module.exports.getPlugins = getPlugins
