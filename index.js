@@ -20,8 +20,10 @@ module.exports = function tachyonsBuild (css, options) {
     trimTrailingZeros: false
   }
 
+  const atImportOptions = options.atImport || {}
+
   const plugins = [
-    atImport(), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
+    atImport(atImportOptions), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
   ]
 
   if (options.minify) {
