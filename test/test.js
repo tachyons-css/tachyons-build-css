@@ -2,7 +2,7 @@ import fs from 'fs'
 import test from 'ava'
 import colorFunction from 'postcss-color-function'
 
-import tachyonsBuildCss from '../'
+import tachyonsBuildCss, { getPlugins } from '../'
 
 const input = fs.readFileSync('test/fixtures/input.css', 'utf8')
 const cssOutput = fs.readFileSync('test/fixtures/output.css', 'utf8')
@@ -25,6 +25,15 @@ test.cb('processes source code and repeats classes', t => {
 
 test.cb('processes source code with custom plugins', t => {
   testFixture(t, inputColorFunction, cssColorFunctionOutput, { plugins: [colorFunction()] })
+})
+
+test.cb('getPlugins returns array of plugins', t => {
+  const plugins = getPlugins()
+
+  t.true(Array.isArray(plugins), 'returns an array')
+  t.true(plugins.every(plugin => typeof plugin === 'function'), 'all plugins are functions')
+
+  t.end()
 })
 
 function testFixture (t, input, output, opts) {
