@@ -47,6 +47,7 @@ const plugins = getPlugins({
 | `minify` | `false` | Minify the output CSS | `true`, `false` |
 | `repeat` | `false` | Whether to repeat classes in selectors | `false`, `1..10` |
 | `plugins` | `false` | Additional postcss plugins | [my(), other(), plugins()] |
+| `atImport` | `{}` | Options for `postcss-import` | `postcss-import` options |
 
 ## License
 
