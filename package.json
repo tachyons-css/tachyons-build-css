@@ -11,7 +11,7 @@
     "lint": "standard",
     "test": "ava -v"
   },
-  "repository": "johnotander/tachyons-build-css",
+  "repository": "tachyons-css/tachyons-build-css",
   "keywords": [],
   "license": "MIT",
   "dependencies": {
