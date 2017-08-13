@@ -42,7 +42,7 @@ const getPlugins = function (options) {
   }
 
   if (options.plugins) {
-    plugins.push(...options.plugins)
+    options.plugins.forEach(plugin => plugins.push(plugin))
   }
 
   return plugins
