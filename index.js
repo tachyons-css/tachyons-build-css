@@ -11,6 +11,7 @@ const vars = require('postcss-css-variables')
 const conditionals = require('postcss-conditionals')
 const rmComments = require('postcss-discard-comments')
 const classRepeat = require('postcss-class-repeat')
+const rtl = require('postcss-rtl')
 
 const getPlugins = function (options) {
   options = options || {}
@@ -39,6 +40,10 @@ const getPlugins = function (options) {
     }
 
     plugins.push(classRepeat({ repeat: repeatNum }))
+  }
+
+  if (options.rtl) {
+    plugins.push(rtl())
   }
 
   if (options.plugins) {

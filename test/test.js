@@ -32,6 +32,13 @@ test('processes source code with custom plugins', async t => {
   t.snapshot(result.css)
 })
 
+test('processes source code with optional rtl support', async t => {
+  const rtlInput = fs.readFileSync('node_modules/tachyons-floats/src/tachyons-floats.css', 'utf8')
+  const result = await tachyonsBuildCss(rtlInput, { rtl: true })
+
+  t.snapshot(result.css)
+})
+
 test('getPlugins returns array of plugins', t => {
   const plugins = getPlugins()
 

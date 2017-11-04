@@ -25,13 +25,15 @@
     "postcss-css-variables": "^0.7.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-discard-comments": "^2.0.4",
-    "postcss-import": "^9.1.0"
+    "postcss-import": "^9.1.0",
+    "postcss-rtl": "^1.1.3"
   },
   "devDependencies": {
     "ava": "*",
     "postcss-color-function": "^3.0.0",
     "standard": "^10.0.2",
-    "tachyons-cli": "^1.0.9"
+    "tachyons-cli": "^1.0.9",
+    "tachyons-floats": "^3.0.4"
   },
   "browserslist": [
     "> 0.1%",
