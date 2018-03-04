@@ -39,3 +39,8 @@
 .grow:focus {
   transform: scale(1.05);
 }
+
+.foo {
+  @extend .bg-cv;
+  @extend .grow;
+}
