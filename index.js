@@ -8,6 +8,7 @@ const prefixer = require('autoprefixer')
 const atImport = require('postcss-import')
 const media = require('postcss-custom-media')
 const vars = require('postcss-css-variables')
+const extend = require('postcss-extend-rule')
 const conditionals = require('postcss-conditionals')
 const rmComments = require('postcss-discard-comments')
 const classRepeat = require('postcss-class-repeat')
@@ -24,7 +25,8 @@ const getPlugins = function (options) {
   const atImportOptions = options.atImport || {}
 
   const plugins = [
-    atImport(atImportOptions), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions), prefixer()
+    atImport(atImportOptions), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions),
+    prefixer(), extend()
   ]
 
   if (options.minify) {
