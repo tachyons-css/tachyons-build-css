@@ -25,9 +25,13 @@ const getPlugins = function (options) {
   const atImportOptions = options.atImport || {}
 
   const plugins = [
-    atImport(atImportOptions), vars(), conditionals(), media(), queries(), perfect(perfectionistOptions),
+    atImport(atImportOptions), conditionals(), media(), queries(), perfect(perfectionistOptions),
     prefixer(), extend()
   ]
+
+  if (!options.preserveVariables) {
+    plugins.splice(1, 0, vars());
+  }
 
   if (options.minify) {
     plugins.push(cssnano())
