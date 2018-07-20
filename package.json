@@ -2,7 +2,7 @@
   "name": "tachyons-build-css",
   "description": "Transpile Tachyons PostCSS to vanilla CSS",
   "author": "John Otander",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "main": "index.js",
   "files": [
     "index.js"
