@@ -12,6 +12,7 @@ const extend = require('postcss-extend-rule')
 const conditionals = require('postcss-conditionals')
 const rmComments = require('postcss-discard-comments')
 const classRepeat = require('postcss-class-repeat')
+const calc = require('postcss-calc')
 const rtl = require('postcss-rtl')
 
 const getPlugins = function (options) {
@@ -30,7 +31,8 @@ const getPlugins = function (options) {
   ]
 
   if (!options.preserveVariables) {
-    plugins.splice(1, 0, vars());
+    plugins.splice(1, 0, calc())
+    plugins.splice(1, 0, vars())
   }
 
   if (options.minify) {

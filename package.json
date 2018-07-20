@@ -20,6 +20,7 @@
     "cssnano": "^3.10.0",
     "perfectionist": "^2.4.0",
     "postcss": "^6.0.19",
+    "postcss-calc": "^6.0.1",
     "postcss-class-repeat": "^0.1.1",
     "postcss-conditionals": "^2.1.0",
     "postcss-css-variables": "^0.8.0",
