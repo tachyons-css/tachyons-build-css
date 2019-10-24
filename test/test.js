@@ -6,7 +6,6 @@ const tachyonsBuildCss = require('../')
 const { getPlugins } = require('../')
 
 const input = fs.readFileSync('test/fixtures/input.css', 'utf8')
-const inputColorFunction = fs.readFileSync('test/fixtures/input_color_function.css', 'utf8')
 
 test('processes source code', async t => {
   const result = await tachyonsBuildCss(input)

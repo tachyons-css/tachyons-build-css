@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`processes source code 1`] = `
+"/*
+   BACKGROUND SIZE
+   Base:
+    bg = background-size
+   Modifiers:
+    cv = cover
+    cn = contain
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+*/
+.bg-cv { background-size: cover; }
+.bg-cn { background-size: contain; }
+.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+.foo { background-size: cover; }
+.foo:hover, .foo:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+@media screen and (min-width: 30em) {
+ .bg-cv-ns { background-size: cover; }
+ .bg-cn-ns { background-size: contain; }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+ .bg-cv-m { background-size: cover; }
+ .bg-cn-m { background-size: contain; }
+}
+@media screen and (min-width: 60em) {
+ .bg-cv-l { background-size: cover; }
+ .bg-cn-l { background-size: contain; }
+}
+"
+`;
+
+exports[`processes source code and minifies css 1`] = `".bg-cv{background-size:cover}.bg-cn{background-size:contain}.grow:focus,.grow:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}.foo{background-size:cover}.foo:focus,.foo:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}@media screen and (min-width:30em){.bg-cv-ns{background-size:cover}.bg-cn-ns{background-size:contain}}@media screen and (min-width:30em) and (max-width:60em){.bg-cv-m{background-size:cover}.bg-cn-m{background-size:contain}}@media screen and (min-width:60em){.bg-cv-l{background-size:cover}.bg-cn-l{background-size:contain}}"`;
+
+exports[`processes source code and repeats classes 1`] = `
+"/*
+   BACKGROUND SIZE
+   Base:
+    bg = background-size
+   Modifiers:
+    cv = cover
+    cn = contain
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+*/
+.bg-cv.bg-cv.bg-cv.bg-cv { background-size: cover; }
+.bg-cn.bg-cn.bg-cn.bg-cn { background-size: contain; }
+.grow.grow.grow.grow:hover, .grow.grow.grow.grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+.foo.foo.foo.foo { background-size: cover; }
+.foo.foo.foo.foo:hover, .foo.foo.foo.foo:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+@media screen and (min-width: 30em) {
+ .bg-cv-ns.bg-cv-ns.bg-cv-ns.bg-cv-ns { background-size: cover; }
+ .bg-cn-ns.bg-cn-ns.bg-cn-ns.bg-cn-ns { background-size: contain; }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+ .bg-cv-m.bg-cv-m.bg-cv-m.bg-cv-m { background-size: cover; }
+ .bg-cn-m.bg-cn-m.bg-cn-m.bg-cn-m { background-size: contain; }
+}
+@media screen and (min-width: 60em) {
+ .bg-cv-l.bg-cv-l.bg-cv-l.bg-cv-l { background-size: cover; }
+ .bg-cn-l.bg-cn-l.bg-cn-l.bg-cn-l { background-size: contain; }
+}
+"
+`;
+
+exports[`processes source code with custom plugins 1`] = `
+"/*
+   BACKGROUND SIZE
+   Base:
+    bg = background-size
+   Modifiers:
+    cv = cover
+    cn = contain
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+*/
+.bg-cv { background-size: cover; }
+.bg-cn { background-size: contain; }
+.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+.foo { background-size: cover; }
+.foo:hover, .foo:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+@media screen and (min-width: 30em) {
+ .bg-cv-ns { background-size: cover; }
+ .bg-cn-ns { background-size: contain; }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+ .bg-cv-m { background-size: cover; }
+ .bg-cn-m { background-size: contain; }
+}
+@media screen and (min-width: 60em) {
+ .bg-cv-l { background-size: cover; }
+ .bg-cn-l { background-size: contain; }
+}
+"
+`;
+
+exports[`processes source code with optional rtl support 1`] = `
+"/* Media Query Variables */
+/*
+
+   FLOATS
+
+   1. Floated elements are automatically rendered as block level elements.
+      Setting floats to display inline will fix the double margin bug in
+      ie6. You know... just in case.
+
+   2. Don't forget to clearfix your floats with .cf
+
+   Base:
+     f = float
+
+   Modifiers:
+     l = left
+     r = right
+     n = none
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+.fl { _display: inline; }
+[dir=ltr] .fl { float: left; }
+[dir=rtl] .fl { float: right; }
+.fr { _display: inline; }
+[dir=ltr] .fr { float: right; }
+[dir=rtl] .fr { float: left; }
+[dir] .fn { float: none; }
+@media screen and (min-width: 30em) {
+ .fl-ns { _display: inline; }
+ [dir=ltr] .fl-ns { float: left; }
+ [dir=rtl] .fl-ns { float: right; }
+ .fr-ns { _display: inline; }
+ [dir=ltr] .fr-ns { float: right; }
+ [dir=rtl] .fr-ns { float: left; }
+ [dir] .fn-ns { float: none; }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+ .fl-m { _display: inline; }
+ [dir=ltr] .fl-m { float: left; }
+ [dir=rtl] .fl-m { float: right; }
+ .fr-m { _display: inline; }
+ [dir=ltr] .fr-m { float: right; }
+ [dir=rtl] .fr-m { float: left; }
+ [dir] .fn-m { float: none; }
+}
+@media screen and (min-width: 60em) {
+ .fl-l { _display: inline; }
+ [dir=ltr] .fl-l { float: left; }
+ [dir=rtl] .fl-l { float: right; }
+ .fr-l { _display: inline; }
+ [dir=ltr] .fr-l { float: right; }
+ [dir=rtl] .fr-l { float: left; }
+ [dir] .fn-l { float: none; }
+}
+"
+`;

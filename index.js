@@ -64,6 +64,9 @@ const getPlugins = function (options) {
 module.exports = function tachyonsBuild (css, options) {
   const plugins = getPlugins(options)
 
+  if (options && !options.hasOwnProperty('from')) options.from = undefined
+  options = options || {from: undefined}
+
   return postcss(plugins).process(css, options)
 }
 
