@@ -16,8 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^8.1.0",
-    "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
+    "node-css-mqpacker": "^8.0.1",
     "perfectionist": "^2.4.0",
     "postcss": "^6.0.19",
     "postcss-calc": "^6.0.1",
